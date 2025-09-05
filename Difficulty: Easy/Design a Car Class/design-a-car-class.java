@@ -1,25 +1,26 @@
 class Car {
-    // Properties
-    private String brand;
-    private String model;
-    private int year;
-
-    // Constructor to initialize brand, model, and year
-    public Car(String brand, String model, int year) {
-        this.brand = brand;
-        this.model = model;
-        this.year = year;
+    // Define the properties
+    // brand, model and year
+    private String brand,model;
+    int year;
+    // Constructor
+    public Car(String brand,String model,int year) {
+        // Initialize brand, model, and year
+        this.brand=brand;
+        this.model=model;
+        this.year=year;
     }
 
-    // Method to display car details
+    // Method to display details
     public void displayDetails() {
+        
+        // Print car details in the specified format
         System.out.println("Car Details:");
-        System.out.println("Brand: " + brand);
-        System.out.println("Model: " + model);
-        System.out.println("Year: " + year);
+        System.out.println("Brand: "+brand);
+        System.out.println("Model: "+model);
+        System.out.println("Year: "+year);
     }
 }
-
 
 class Solution {
     public void fun(String brand, String model, int year) {
