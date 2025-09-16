@@ -35,15 +35,11 @@ class Solution {
             ListNode newNode =new ListNode(dumhed.val);
             newNode.next=rev;
             rev=newNode;
-            // rev=rev.next;
             dumhed=dumhed.next;
             len++;
         }
-       
-        // System.out.println(len);
         dumhed=head;
         dumrev=rev;
-        // print(dumhed);
         ListNode ans=new ListNode(-1);
         ListNode dumans=ans;
         for(int i=0;i<len;i++)
@@ -70,6 +66,4 @@ class Solution {
         copyListContent(head, ans.next);
     }
 }
-
-
 
