@@ -23,8 +23,40 @@ class Solution {
                 }
             }
         }
+
+        
+        //Space optimization
+
+        int prev[]=new int[n];
+        Arrays.fill(prev,0);
+        for(int i=0;i<m;i++)
+        {
+            int[] cur=new int[n];
+            for(int j=0;j<n;j++)
+            {
+                if(i==0 && j==0)
+                cur[j]=1;
+                else
+                {
+                    int up=0;
+                    int left=0;
+                    if(i>0) up=prev[j];
+                    if(j>0) left=cur[j-1];
+                    cur[j]=up+left;
+                }
+                
+            }
+            for(int k=0;k<n;k++)
+                {
+                    prev[k]=cur[k];
+                }
+
+        }
+        return prev[n-1];
+
+
         // int ans=path(m-1,n-1,dp);
-        return dp[m-1][n-1];
+        // return dp[m-1][n-1];
     }
     int path(int i,int j,int[][] dp)
     {
